@@ -1,18 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="main.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-</head>
 <?php include "inc/header.php" ?>
+<?php include "inc/data-collector.php" ?>
+<?php include "inc/evaluate-user-data.php" ?>
 
-<body>
 
+<div class="container-sm">
+    <form name="myForm" action="frage6.php" onsubmit="return validateQuestion('frage1')" method="post">
+    <div class="container-sm">
+      <p style="text-align:left;color:blueviolet;font-size:48px">Fitness-Test</h2>
+      <p style="font-size:20px"> Frage 5: Hast du das Gefühl, zu wenig, genügend
+oder viel zu viel zusätzliche körperliche
+Aktivitäten zu betreiben?</p>
+      <div class="mb-3">
+        <label for="frage1" class="form-label" style="font-size:30px"></label>
+        <input type="range" class="form-range" min="1" max="5" value="2.511" id="frage1">
+        <input type="hidden" name="pageID" value="index">
+        <input type="hidden" name="range-slider-changed">
+        <p id="validate-warning" class="warning"></p>
 
-</body>
+        <div class="form-check">
+          <div class="row align-items-start">
+            <div class="col">
+              viel zu wenig
+            </div>
+            <div class="col" style="text-align:center">
+            genügend
+            </div>
+            <div style="text-align:right" class="col">
+              viel zu viel
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="submit" id="button1" class="btn btn-outline-primary btn-lg" >Absenden</button>
+  </form>
