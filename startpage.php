@@ -2,6 +2,7 @@
  session_start();
  session_destroy();
 include "inc/header.php";
+include "inc/error-types.php";
 ?>
   
   
